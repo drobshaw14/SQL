@@ -1,0 +1,19 @@
+/**restaurant things**/
+CREATE TABLE maincup (id INTEGER, item TEXT, ingredients INTEGER, price INTEGER, rating INTEGER);
+INSERT INTO maincup VALUES (1, "burgers", 3, 10.99, 5);
+INSERT INTO maincup VALUES (2, "quesdillas", 4, 12.99, 3);
+INSERT INTO maincup VALUES (3, "tacos", 5, 15.49, 4);
+INSERT INTO maincup VALUES (4, "pizzas", 6,  12.29, 4);
+INSERT INTO maincup VALUES (5, "salads", 4, 11.49, 5);
+INSERT INTO maincup VALUES (6, "coffee", 3, 3.29, 5);
+INSERT INTO maincup VALUES (7, "dessert", 2, 4.69, 5);
+INSERT INTO maincup VALUES (8, "jazzy fries", 4, 7.99, 5);
+INSERT INTO maincup VALUES (9, "fried pickles", 2, 9.99, 4);
+INSERT INTO maincup VALUES (10, "buffalo chicken", 4, 12.99, 5);
+INSERT INTO maincup VALUES (11, "ribeye", 1, 22.49, 4);
+INSERT INTO maincup VALUES (12, "spinach dip", 10, 11.99, 5);
+INSERT INTO maincup VALUES (13, "fried onions", 2, 5.79, 5);
+INSERT INTO maincup VALUES (14, "fish chips", 6, 13.99, 2);
+INSERT INTO maincup VALUES (15, "liquor", 1, 2.99, 1);
+SELECT * from maincup where price > 7.99 order by price; 
+SELECT ingredients, SUM(ingredients) from maincup group by price;
