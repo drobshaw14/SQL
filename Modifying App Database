@@ -1,0 +1,30 @@
+/* What does the app's SQL look like? */
+
+CREATE TABLE calm_app (id INTEGER, email TEXT, most_used_category TEXT, time_completed INTEGER);
+INSERT INTO calm_app VALUES (1, "person1@gmail.com", "daily_calm", 0801);
+INSERT INTO calm_app VALUES (2, "person2@gmail.com", "daily_trip", 1824);
+INSERT INTO calm_app VALUES (3, "person3@hotmail.com", "x_days_of_calm", 0740);
+INSERT INTO calm_app VALUES (4, "person4@gmail.com", "daily_mvmt", 0647);
+INSERT INTO calm_app VALUES (5, "person5@gmail.com", "daily_calm", 1022);
+INSERT INTO calm_app VALUES (6, "person6@gmail.com", "soundscapes", 1607);
+INSERT INTO calm_app VALUES (7, "person7@gmail.com", "daily_calm", 1913);
+
+UPDATE calm_app SET email = "person3@gmail.com" where id = 3;
+UPDATE calm_app SET time_completed = 0545 where id = 6;
+
+SELECT * from calm_app;
+
+DELETE from calm_app where id = 2;
+SELECT * from calm_app;
+
+UPDATE calm_app SET most_used_category = "daily_calm" where id = 4;
+SELECT * from calm_app;
+
+UPDATE calm_app SET time_completed = "1801" where id = 1;
+SELECT * from calm_app;
+
+DELETE from calm_app WHERE id = 6;
+SELECT * from calm_app;
+
+DELETE from calm_app where most_used_category = "x_days_of_calm";
+SELECT * from calm_app;
