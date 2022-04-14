@@ -65,9 +65,9 @@ GROUP BY Product;
 
 /* How many locations are there in New York that sold more than one product in January? */
 SELECT
-    count(*)
+    count(DISTINCT location)
 FROM BIT_DB.JanSales
-WHERE location LIKE '%NewYork%' AND quantity >='2';
+WHERE location LIKE '%NewYork%' AND quantity > 1;
 
 
 /*How many of each type of headphone were sold in February?*/
